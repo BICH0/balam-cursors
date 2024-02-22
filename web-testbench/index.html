@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balam Cursors - TestBench</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <nav>
+        <div>Background: 
+            <div class="color white"></div>
+            <div class="color black"></div>
+            <div class="color red"></div>
+            <div class="color green"></div>
+            <div class="color blue"></div>
+        </div>
+        <div>Text:
+            <div class="color white"></div>
+            <div class="color black"></div>
+        </div>
+    </nav>
+    <main>
+        <div class="default">
+            default
+        </div>
+    
+        <div class="pointer">
+            pointer
+        </div>
+    
+        <div class="not-available right-ptr">
+            right-ptr
+        </div>
+    
+        <div class="not-available center-ptr">
+            center-ptr
+        </div>
+    
+        <!-- ALT PTR -->
+        <div class="copy">
+            copy
+        </div>
+    
+        <div class="help">
+            help
+        </div>
+    
+        <div class="no-drop">
+            no-drop
+        </div>
+    
+        <div class="alias">
+            alias
+        </div>
+    
+        <div class="context-menu">
+            context-menu
+        </div>
+    
+        <!-- MISC -->
+        <div class="text">
+            text
+        </div>
+    
+        <div class="vertical-text">
+            verical-text
+        </div>
+    
+        <div class="crosshair">
+            crosshair
+        </div>
+    
+        <div class="progress">
+            progress
+        </div>
+    
+        <div class="wait">
+            wait
+        </div>
+    
+        <div class="not-allowed">
+            not-allowed
+        </div>
+    
+        <div class="pirate">
+            pirate
+        </div>
+    
+        <!-- HAND -->
+        <div class="openhand">
+            openhand
+        </div>
+    
+        <div class="dnd-move">
+            dnd-move
+        </div>
+    
+        <div class="dnd-no-drop">
+            dnd-no-drop
+        </div>
+    
+        <!-- SIZE -->
+        <div class="all-scroll">
+            all-scroll
+        </div>
+    
+        <div class="size-fdiag">
+            size-fdiag
+        </div>
+    
+        <div class="size-bdiag">
+            size-bdiag
+        </div>
+    
+        <div class="size-ver">
+            size-ver
+        </div>
+    
+        <div class="size-hor">
+            size-hor
+        </div>
+    
+        <!-- SidE -->
+        <div class="t-side">
+            t-side
+        </div>
+    
+        <div class="tr-corner">
+            tr-corner
+        </div>
+    
+        <div class="r-side">
+            r-side
+        </div>
+        
+        <div class="br-corner">
+            br-corner
+        </div>
+        
+        <div class="b-side">
+            b-side
+        </div>
+    
+        <div class="bl-corner">
+            bl-corner
+        </div>
+    
+        <div class="l-side">
+            l-side
+        </div>
+    
+        <div class="tl-corner">
+            tl-corner
+        </div>
+    
+        <!-- ARROW -->
+        <div class="not-available t-arrow">
+            t-arrow
+        </div>
+        <div class="not-available r-arrow">
+            r-arrow
+        </div>
+        <div class="not-available b-arrow">
+            b-arrow
+        </div>
+        <div class="not-available l-arrow">
+            l-arrow
+        </div>
+    
+        <!-- RESIZE -->
+        <div class="row-resize">
+            row-resize
+        </div>
+        <div class="col-resize">
+            col-resize
+        </div>
+        <div class="cell">
+            cell
+        </div>
+    
+        <!-- ZOOM -->
+        <div class="zoom-in">
+            zoom-in
+        </div>
+    
+        <div class="zoom-out">
+            zoom-out
+        </div>
+    </main>
+</body>
+<script>
+    const root = document.querySelector(':root');
+    document.addEventListener("click", e=>{
+        const target = e.target
+        if (target.classList.contains("color")){
+            const parent = target.parentNode
+            switch (parent.textContent.split(":")[0]) {
+                case "Background":
+                    root.style.setProperty('--bg-color', target.classList[1]);
+                    break;
+                case "Text":
+                    root.style.setProperty('--text-color', target.classList[1]);
+                    break;
+                default:
+                    console.log(parent.textContent)
+                    break;
+            }
+        }
+    })
+</script>
+</html>

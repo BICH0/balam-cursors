@@ -1,0 +1,51 @@
+#size x-axis y-axis source_folder destination_folder
+##PTR
+24 2 2 default ../cursors/default
+24 2 2 pointer ../cursors/pointer
+24 22 2 ./right_ptr ../cursors/right_ptr
+24 12 2 ./center_ptr ../cursors/center_ptr
+##ALT PTR
+24 2 2 copy ../cursors/copy
+24 2 2 help ../cursors/help
+24 2 2 no-drop ../cursors/no-drop
+24 2 2 alias ../cursors/alias
+24 2 2 context-menu ../cursors/context-menu
+##MISC
+24 12 12 text ../cursors/text
+24 12 12 vertical-text ../cursors/vertical-text
+24 12 12 crosshair ../cursors/crosshair
+24 2 2 progress ../cursors/progress
+24 12 12 wait ../cursors/wait
+24 12 12 not-allowed ../cursors/not-allowed
+24 12 12 pirate ../cursors/pirate
+##SIZE WIN
+24 12 12 all-scroll/ ../cursors/all-scroll
+24 12 12 size_fdiag/ ../cursors/size_fdiag
+24 12 12 size_bdiag/ ../cursors/size_bdiag
+24 12 12 size_ver ../cursors/size_ver
+24 12 12 size_hor ../cursors/size_hor
+##SIDE
+24 18 12 right_side ../cursors/right_side
+24 5 11 left_side ../cursors/left_side
+24 12 5 top_side ../cursors/top_side
+24 11 18 bottom_side ../cursors/bottom_side
+24 22 22 ./bottom_right_corner ../cursors/bottom_right_corner
+24 1 22 ./bottom_left_corner ../cursors/bottom_left_corner
+24 1 1 ./top_left_corner ../cursors/top_left_corner
+24 22 1 ./top_right_corner ../cursors/top_right_corner
+##ARROW
+24 18 12 right-arrow ../cursors/right-arrow
+24 5 11 left-arrow ../cursors/left-arrow
+24 12 5 up-arrow ../cursors/up-arrow
+24 11 18 down-arrow ../cursors/down-arrow
+##RESIZE
+24 12 11 row-resize ../cursors/row-resize
+24 12 11 col-resize ../cursors/col-resize
+24 12 12 cell ../cursors/cell
+##ZOOM
+24 12 11 ./zoom-in ../cursors/zoom-in
+24 12 11 ./zoom-out ../cursors/zoom-out
+##HAND
+24 12 13 ./openhand ../cursors/openhand
+24 12 11 ./dnd-move ../cursors/dnd-move
+24 12 11 ./dnd-no-drop ../cursors/dnd-no-drop
