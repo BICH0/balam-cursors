@@ -11,8 +11,21 @@ build_cursor(){
    ypos=$3
    source=$4
    dest=$5
-   cfgfile=$source/xcursor.cfg
    echo "Building $source"
+   if [ ! -d "$source" ]
+   then
+      echo -e "[\e[0;31mERROR\e[0m] Source not found"
+      exit 1
+   fi
+   if [[ $source =~ .*-.* ]]
+   then
+      echo -e "[\e[0;33mWARN\e[0m] Moving source due to error in name"
+      nsource=$(echo $source | sed 's/-/_/g')
+      mv $source $nsource
+      source=$nsource
+
+   fi
+   cfgfile=$source/xcursor.cfg
    if [[ -f $cfgfile ]]
    then
       :>$cfgfile
